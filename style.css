@@ -56,6 +56,26 @@ body {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-.controls .controls_range {
-    
+.controls_range input[type=range] {
+    -webkit-appearance: none;
+    height: 5px;
+    background-color: rgba(236, 240, 241,0.9);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.16), 0 1px 1px rgba(0,0,0,0.23);
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
+
+.controls_range input[type=range]::-webkit-slider-thumb{
+    border-radius: 7.5px;
+    border: 1px solid rgba(236, 240, 241,0.9);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.16), 0 1px 1px rgba(0,0,0,0.23);
+    background-color: white;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.controls_range input[type=range]:focus {
+    outline: none;
+  }
