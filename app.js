@@ -4,7 +4,8 @@ const canvas = document.getElementById("jsCanvas"),
     range = document.getElementById("jsRange"),
     mode = document.getElementById("jsMode"),
     save = document.getElementById("jsSave"),
-    clear = document.getElementById("jsClear");
+    clear = document.getElementById("jsClear"),
+    myColor = document.getElementById("jsMyColor");
 
 canvas.width = 700;
 canvas.height = 500;
@@ -80,6 +81,18 @@ function handleClearClick() {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
+function handleMyColor(event) {
+    const color = event.target.value;
+    const div = document.createElement("div")
+    const jsColors = document.getElementById("jsMyColors");
+    div.className = "controls_color jsColor";
+    div.style.backgroundColor = color;
+    div.addEventListener("click", handleColorClick);
+    jsColors.appendChild(div);
+    ctx.strokeStyle = color;
+    ctx.fillStyle = color;
+}
+
 if(canvas){
     canvas.addEventListener("mousemove", onMouseMove);
     canvas.addEventListener("mousedown", startPainting);
@@ -108,4 +121,8 @@ if(save) {
 
 if(clear) {
     clear.addEventListener("click", handleClearClick);
+}
+
+if(myColor) {
+    myColor.addEventListener("change", handleMyColor);
 }
