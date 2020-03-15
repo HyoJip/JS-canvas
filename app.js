@@ -3,7 +3,8 @@ const canvas = document.getElementById("jsCanvas"),
     ctx = canvas.getContext("2d"),
     range = document.getElementById("jsRange"),
     mode = document.getElementById("jsMode"),
-    save = document.getElementById("jsSave");
+    save = document.getElementById("jsSave"),
+    clear = document.getElementById("jsClear");
 
 canvas.width = 700;
 canvas.height = 500;
@@ -74,6 +75,11 @@ function handleSaveClick() {
     link.click();
 }
 
+function handleClearClick() {
+    ctx.fillStyle = "white"
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+
 if(canvas){
     canvas.addEventListener("mousemove", onMouseMove);
     canvas.addEventListener("mousedown", startPainting);
@@ -98,4 +104,8 @@ if(mode) {
 
 if(save) {
     save.addEventListener("click", handleSaveClick);
+}
+
+if(clear) {
+    clear.addEventListener("click", handleClearClick);
 }
