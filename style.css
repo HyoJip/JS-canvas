@@ -1,0 +1,61 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap');
+body {
+    background-color: #f6f9fc;
+    font-family: 'Nanum Myeongjo', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0 10px 0;
+}
+
+.canvas {
+    width: 700px;
+    height: 500px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.controls {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls_colors {
+    display: flex;
+    margin: 30px;
+}
+
+.controls_btns button {
+    all: unset;
+    cursor: pointer;
+    background-color: white;
+    padding: 5px 0;
+    width: 80px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border: 1px solid rgba(0,0,0,0.23);
+    color: rgba(0,0,0,0.6);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.controls_btns button:active {
+    transform: scale(0.98);
+}
+
+.controls_colors .controls_color {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.controls .controls_range {
+    
+}
